@@ -1,0 +1,28 @@
+x = ("enter your id")
+y = ("21")
+print(x+"*"+y)
+
+x=("sanjay")
+x*2
+
+x = ("enter your id")
+x.lower()
+x.upper()
+x.title()
+x.capitalize()
+u=x.split()
+'*'.join(u)
+x.center(50)
+x = ("  enter your id")
+x.strip()
+e = ("  enter your id    ")
+e.rstrip()
+e = ("  enter your id    ")
+e.lstrip()
+x = ("  enter your id")
+x.replace("id","name")
+
+x = ("  enter your id")
+x.startswith("e")
+x = ("enter your id")
+x.endswith("d")
