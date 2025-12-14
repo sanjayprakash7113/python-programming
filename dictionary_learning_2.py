@@ -108,9 +108,28 @@ d = {"a": inner, "b": inner}
 d["a"]["value"] = 99
 print(inner)
 
+d = {"a": {}}
+d["a"].setdefault("marks", []).extend([1,2,3])
+d["a"].setdefault("marks", []).append(4)
+print(d)
+
+t = {"a": {"b": {"c": 10}}}
+print(t["a"]["b"]["c"])
 
 
 
 
 
+#JSON & Python Dictionary
 
+#Convert JSON → Python dict
+import json
+s='{"a":1,"b":4,"c":[1,2,3]}'
+d=json.loads(s)
+print(d)
+
+#Convert Python dict → JSON
+import json
+a={"a":1,"b":2,"c":[1,2,3]}
+s=json.dumps(a)
+print(s)
