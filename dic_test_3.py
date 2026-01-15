@@ -33,15 +33,21 @@ print(key)
 
 
 a = [1, 2, 3, 4, 5, 6]
-b={}
+b={"even":[],"odd":[]}
 for i in a:
     if i%2==0:
-        if x not in b:
-            b[i]=[]
-            b["even"].append(i)
+        b["even"].append(i)
     else:
-        b[i]=[]
         b["odd"].append(i)
+print(b)
+  
+
+
+
+a=[12,342,22,1,4654]
+b={}
+for i in a:
+    b[i]=len(str(i))
 print(b)
 
 
@@ -50,12 +56,3 @@ print(b)
 
 
 
-
-
-
-
-
-
-
-
-    
