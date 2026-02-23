@@ -22,6 +22,7 @@ class Solution:
             else:
                 a=0
                 break
+        
 print(digits)
        
     
