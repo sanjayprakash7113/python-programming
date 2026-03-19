@@ -39,12 +39,45 @@ print(ma_x)
 
 
 s = "abcabcbb"
-for i in s:
+mx=0
+for i in range(len(s)):
     cur=""
-    if i not in cur:
-        cur+=i
-    else:
-        break
-print(len(cur))
+    for j in range(i,len(s)):
+        if s[j] not in cur:
+            cur+=s[j]
+            mx=max(mx,len(cur))
+        else:
+            break
 
+print(mx)
+
+
+seen=set()
+left=0
+mx=0
+for i in range(len(s)):
+    while s[i] in seen:
+        seen.remove(s[left])
+        left+=1
+    seen.add(s[i])
+    mx=max(mx,i-left+1)
+print(mx)
+
+nums = [4, 2, 1, 7, 8, 1, 2, 8]
+k = 8
+mx=0
+for i in range(len(nums)):
+    cur=0
+    l=0
+    for j in range(i+1,len(nums)):
+        if cur<k:
+            cur+=nums[j]
+            l+=1
+            mx=max(mx,l)
+print(mx)
+        
+
+
+
+      
 
