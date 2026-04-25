@@ -34,3 +34,8 @@ else:
             print("valid")
         else:
             print("invalid")
+s = "abcde"
+result = ""
+for i in range(len(s)-1, -1, -1):
+    result += s[i]
+print(result)

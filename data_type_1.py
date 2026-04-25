@@ -47,7 +47,7 @@ print(res,end=" ")
 
 
 
-count(s):
+def count(s):
     if not s or s[0]=="0":
         return 0
     n=len(s)
@@ -60,4 +60,30 @@ count(s):
         two=int(s[i-2:i])
         if 10<=two<=26:
             dp[i]+=dp[i-2]
-    return dp[n]
+    print(dp[n])
+
+count("226")
+
+
+
+def prim(s):
+    if s<2:
+        return False
+    for i in range(2,s):
+        if s%i==0:
+            return False
+    return True
+def is_prim(n):
+    for a in range(2,n):
+        b=n-a
+        if prim(a) and prim(b):
+            print(a,b)
+            return
+a=int(input())
+is_prim(a)
+    
+
+
+
+
+
